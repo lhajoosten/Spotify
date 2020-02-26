@@ -39,7 +39,7 @@ class Account
     {
         // check if length is between 25 and 5 chars
         if (strlen($username) > 25 || strlen($username) < 5) {
-            array_push($this->errorArray, "Your username must be between 25 & 5 characters");
+            array_push($this->errorArray, Constants::$usernameLengthError);
             return;
         }
 
@@ -50,7 +50,7 @@ class Account
     {
         // check if length is between 25 and 2 chars
         if (strlen($first) > 25 || strlen($first) < 2) {
-            array_push($this->errorArray, "Your first name must be between 25 & 2 characters");
+            array_push($this->errorArray, Constants::$firstNameLengthError);
             return;
         }
     }
@@ -59,7 +59,7 @@ class Account
     {
         // check if length is between 25 and 2 chars
         if (strlen($last) > 25 || strlen($last) < 2) {
-            array_push($this->errorArray, "Your last name must be between 25 & 2 characters");
+            array_push($this->errorArray, Constants::$lastNameLengthError);
             return;
         }
     }
@@ -67,12 +67,12 @@ class Account
     private function validateEmails($email, $confirmEmail)
     {
         if ($email != $confirmEmail) {
-            array_push($this->errorArray, "Your emails don't match");
+            array_push($this->errorArray, Constants::$emailDoNotMatchError);
             return;
         }
 
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            array_push($this->errorArray, "Your email is invalid");
+            array_push($this->errorArray, Constants::$emailNotValidError);
             return;
         }
 
@@ -82,18 +82,18 @@ class Account
     private function validatePasswords($password, $confirmPassword)
     {
         if ($password != $confirmPassword) {
-            array_push($this->errorArray, "Your passwords don't match");
+            array_push($this->errorArray, Constants::$passwordsDoNotMatchError);
             return;
         }
 
         if (preg_match('/[^A-Za-z0-9]/', $password)) {
-            array_push($this->errorArray, "Your password can only contain numbers and letters");
+            array_push($this->errorArray, Constants::$passwordNotValidError);
             return;
         }
 
         // check if length is between 30 and 5 chars
         if (strlen($password) > 30 || strlen($password) < 5) {
-            array_push($this->errorArray, "Your password must be between 30 & 50 characters");
+            array_push($this->errorArray, Constants::$passwordLengthError);
             return;
         }
     }
