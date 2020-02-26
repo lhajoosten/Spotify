@@ -25,6 +25,8 @@ function getInputValue($name)
     <title>Welcome to Spotify!</title>
     <link rel="icon" href="assets/img/icons/Spotify_Icon_RGB_Green.png">
     <link rel="stylesheet" type="text/css" href="assets/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/register.js"></script>
 </head>
@@ -57,12 +59,26 @@ if (isset($_POST['registerButton'])) {
                 <p>
                     <?php echo $account->getError(Constants::$loginFailed); ?>
                     <label for="loginUsername">Username</label>
-                    <input id="loginUsername" name="loginUsername" type="text" placeholder="Username" required>
+                    <input id="loginUsername" name="loginUsername" type="text" placeholder="Username"
+                           value="<?php getInputValue('loginUsername'); ?>" required>
                 </p>
                 <p>
                     <label for="loginPassword">Password</label>
-                    <input id="loginPassword" name="loginPassword" type="password" placeholder="Password" required>
+                    <input id="loginPassword" class="form-control" name="loginPassword" type="password"
+                           placeholder="Password" required>
+                    <span class="field-icon" onclick="showPassword()"><img src="assets/img/icons/eye.png" alt=""></span>
                 </p>
+
+                <script>
+                    function showPassword() {
+                        const pw_ele = document.getElementById("loginPassword");
+                        if (pw_ele.type === "password") {
+                            pw_ele.type = "text";
+                        } else {
+                            pw_ele.type = "password";
+                        }
+                    }
+                </script>
 
                 <button type="submit" name="loginButton">LOGIN</button>
 
@@ -137,8 +153,11 @@ if (isset($_POST['registerButton'])) {
 
             <ul>
                 <li><img src="https://img.icons8.com/metro/48/000000/checkmark.png"> Create your own playlists</li>
-                <li><img src="https://img.icons8.com/metro/48/000000/checkmark.png"> Follow artists to keep up to date</li>
-                <li><img src="https://img.icons8.com/metro/48/000000/checkmark.png"> Discover music you'll fall in love with</li>
+                <li><img src="https://img.icons8.com/metro/48/000000/checkmark.png"> Follow artists to keep up to date
+                </li>
+                <li><img src="https://img.icons8.com/metro/48/000000/checkmark.png"> Discover music you'll fall in love
+                    with
+                </li>
             </ul>
         </div>
 
