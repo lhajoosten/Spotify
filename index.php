@@ -24,7 +24,19 @@ if (isset($_SESSION['userLoggedIn'])) {
 <div id="nowPlayingBarContainer">
     <div id="nowPlayingBar">
         <div id="nowPlayingLeft">
-
+            <div class="content">
+                <span class="albumLink">
+                    <img src="assets/img/album.jpg" alt="">
+                </span>
+                <div class="trackInfo">
+                    <span class="trackName">
+                        <span>Braindead Lunatic</span>
+                    </span>
+                    <span class="artistName">
+                        <span>Nosferatu, Spitnoise</span>
+                    </span>
+                </div>
+            </div>
         </div>
         <div id="nowPlayingCenter">
             <div class="content playerControls">
@@ -59,7 +71,19 @@ if (isset($_SESSION['userLoggedIn'])) {
             </div>
         </div>
         <div id="nowPlayingRight">
+            <div class="volumeBar">
 
+                <button class="controlButton volume" title="Volume button">
+                    <img src="assets/img/icons/sound.png" alt="Volume">
+                </button>
+
+                <div class="progressBar">
+                    <div class="progressBarBg">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
