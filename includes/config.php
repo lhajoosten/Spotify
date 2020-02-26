@@ -1,10 +1,10 @@
 <?php
-    ob_start();
+ob_start();
 
-    $timezone = date_default_timezone_set("Europe/Amsterdam");
+$timezone = date_default_timezone_set("Europe/Amsterdam");
 
-    $con = mysqli_connect("localhost", "root", "", "spotify");
+$con = mysqli_connect("localhost", "root", "", "spotify");
 
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect: " . mysqli_connect_errno();
-    }
+if (mysqli_connect_errno()) {
+    echo "Failed to connect: " . mysqli_connect_errno();
+}

@@ -1,24 +1,26 @@
 <?php
 
 // sanitize input data
-function sanitizeFormUsername($input) {
+function sanitizeFormUsername($input)
+{
     $input = strip_tags($input);
     $input = str_replace(" ", "", $input);
     return $input;
 }
 
-function sanitizeFormString($input) {
+function sanitizeFormString($input)
+{
     $input = strip_tags($input);
     $input = str_replace(" ", "", $input);
     $input = ucfirst(strtolower($input));
     return $input;
 }
 
-function sanitizePassword($input) {
+function sanitizePassword($input)
+{
     $input = strip_tags($input);
     return $input;
 }
-
 
 
 if (isset($_POST['registerButton'])) {

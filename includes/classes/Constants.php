@@ -11,5 +11,7 @@ class Constants
     public static $passwordsDoNotMatchError = "Your passwords don't match";
     public static $passwordNotValidError = "Your password can only contain numbers and letters";
     public static $passwordLengthError = "Your password must be between 30 & 50 characters";
+    public static $usernameTaken = "This username is already taken";
+    public static $emailTaken = "This username is already taken";
 
 }
