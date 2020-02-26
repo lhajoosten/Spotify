@@ -16,8 +16,25 @@ if (isset($_SESSION['userLoggedIn'])) {
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Spotify</title>
+    <link rel="icon" href="assets/img/icons/Spotify_Icon_RGB_Green.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 </head>
 <body>
-<h1>This is the index page!</h1>
+
+<div id="nowPlayingBarContainer">
+    <div id="nowPlayingBar">
+        <div id="nowPlayingLeft">
+
+        </div>
+        <div id="nowPlayingCenter">
+
+        </div>
+        <div id="nowPlayingRight">
+
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>

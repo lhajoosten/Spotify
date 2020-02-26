@@ -22,7 +22,7 @@ function getInputValue($name)
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to Spotify!</title>
+    <title>Welcome to Spotify</title>
     <link rel="icon" href="assets/img/icons/Spotify_Icon_RGB_Green.png">
     <link rel="stylesheet" type="text/css" href="assets/css/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
