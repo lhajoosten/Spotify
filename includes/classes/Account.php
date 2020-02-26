@@ -19,12 +19,20 @@ class Account
         $this->validatePasswords($password, $confirmPassword);
 
         if (empty($this->errorArray)) {
-            // insert into database
+            // TODO: insert into database
             return true;
         } else {
             // don't insert and return false
             return false;
         }
+    }
+
+    public function getError($error)
+    {
+        if (!in_array($error, $this->errorArray)) {
+            $error = "";
+        }
+        return "<span class='errorMessage'>$error</span>";
     }
 
     private function validateUsername($username)
@@ -35,12 +43,12 @@ class Account
             return;
         }
 
-        // check if user exists
+        // TODO: check if user exists
     }
 
     private function validateFirstName($first)
     {
-        // check if length is between 25 and 5 chars
+        // check if length is between 25 and 2 chars
         if (strlen($first) > 25 || strlen($first) < 2) {
             array_push($this->errorArray, "Your first name must be between 25 & 2 characters");
             return;
@@ -49,7 +57,7 @@ class Account
 
     private function validateLastName($last)
     {
-        // check if length is between 25 and 5 chars
+        // check if length is between 25 and 2 chars
         if (strlen($last) > 25 || strlen($last) < 2) {
             array_push($this->errorArray, "Your last name must be between 25 & 2 characters");
             return;
@@ -68,7 +76,7 @@ class Account
             return;
         }
 
-        // check if email is being used
+        // TODO: check if email is being used
     }
 
     private function validatePasswords($password, $confirmPassword)
