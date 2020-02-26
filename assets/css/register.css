@@ -31,21 +31,25 @@ body {
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #fff;
+    color: #fff;
 }
+
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #fff;
-    opacity:  1;
+    color: #fff;
+    opacity: 1;
 }
+
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #fff;
-    opacity:  1;
+    color: #fff;
+    opacity: 1;
 }
+
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color:    #fff;
+    color: #fff;
 }
+
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color:    #fff;
+    color: #fff;
 }
 
 
@@ -103,7 +107,54 @@ body {
 }
 
 .hasAccountText span {
-    font-weight: bold!important;
+    font-weight: bold !important;
     font-size: 12px;
     cursor: pointer;
+}
+
+#loginForm {
+    padding: 150px 0 0 0;
+}
+
+#registerForm {
+    padding: 20px 0 0 0;
+    display: none;
+}
+
+#loginText {
+    padding: 175px 0 50px 100px;
+    display: table-cell;
+}
+
+#loginText h1 {
+    font-size: 40px;
+    color: #07d159;
+    font-weight: bolder;
+}
+
+#loginText h2 {
+    color: #fff;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+#loginText li {
+    line-height: 5px;
+    list-style: none;
+    padding: 5px;
+}
+
+#loginText li img {
+    line-height: 5px;
+    height: 17.5px;
+    width: 17.5px;
+    background-color: #07d159;
+    border: 2px solid #07d159;
+    border-radius: 50%;
+}
+
+.errorMessage {
+    color: #07d159!important;
+    font-size: 12px;
+    display: block;
 }

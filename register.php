@@ -23,11 +23,30 @@ function getInputValue($name)
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Spotify!</title>
+    <link rel="icon" href="assets/img/icons/Spotify_Icon_RGB_Green.png">
     <link rel="stylesheet" type="text/css" href="assets/css/register.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/register.js" ></script>
+    <script type="text/javascript" src="assets/js/register.js"></script>
 </head>
 <body>
+<?php
+if (isset($_POST['registerButton'])) {
+    echo '<script>
+    $(document).ready(function () {
+        $("#loginForm").hide();
+        $("#registerForm").show();
+    });
+</script>';
+} else {
+    echo '<script>
+    $(document).ready(function () {
+        $("#loginForm").show();
+        $("#registerForm").hide();
+    });
+</script>';
+}
+?>
+
 <div id="background">
     <div id="loginContainer">
         <div id="inputContainer">
@@ -111,6 +130,18 @@ function getInputValue($name)
                 </div>
             </form>
         </div>
+
+        <div id="loginText">
+            <h1>Listen to all your favourite songs, right now.</h1>
+            <h2>Unlimited amount of songs, all for free.</h2>
+
+            <ul>
+                <li><img src="https://img.icons8.com/metro/48/000000/checkmark.png"> Create your own playlists</li>
+                <li><img src="https://img.icons8.com/metro/48/000000/checkmark.png"> Follow artists to keep up to date</li>
+                <li><img src="https://img.icons8.com/metro/48/000000/checkmark.png"> Discover music you'll fall in love with</li>
+            </ul>
+        </div>
+
     </div>
 </div>
 </body>
