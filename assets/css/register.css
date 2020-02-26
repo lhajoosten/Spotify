@@ -105,4 +105,5 @@ body {
 .hasAccountText span {
     font-weight: bold!important;
     font-size: 12px;
+    cursor: pointer;
 }

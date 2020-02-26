@@ -24,6 +24,8 @@ function getInputValue($name)
     <meta charset="UTF-8">
     <title>Welcome to Spotify!</title>
     <link rel="stylesheet" type="text/css" href="assets/css/register.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/register.js" ></script>
 </head>
 <body>
 <div id="background">
