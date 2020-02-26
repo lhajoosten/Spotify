@@ -11,6 +11,19 @@ class Account
         $this->errorArray = array();
     }
 
+    public function login($username, $password)
+    {
+        $pw = md5($password);
+
+        $query = mysqli_query($this->con, "SELECT * FROM users WHERE username='$username' AND password='$pw'");
+        if (mysqli_num_rows($query) == 1) {
+            return true;
+        } else {
+            array_push($this->errorArray, Constants::$loginFailed);
+            return false;
+        }
+    }
+
     // validate input data
     public function register($username, $first, $last, $email, $confirmEmail, $password, $confirmPassword)
     {
