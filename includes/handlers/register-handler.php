@@ -1,5 +1,4 @@
 <?php
-    include("includes/classes/Account.php");
 
 // sanitize input data
 function sanitizeFormUsername($input) {
@@ -40,5 +39,10 @@ if (isset($_POST['registerButton'])) {
     // password confirmation
     $registerPasswordConfirmation = sanitizePassword($_POST['registerPasswordConfirmation']);
 
-    $account->register($registerUsername, $registerFirstName, $registerLastName, $registerEmail, $registerEmailConfirmation, $registerPassword, $registerPasswordConfirmation);
+    $wasSuccessful = $account->register($registerUsername, $registerFirstName, $registerLastName, $registerEmail, $registerEmailConfirmation, $registerPassword, $registerPasswordConfirmation);
+
+    if ($wasSuccessful) {
+        header("Location: index.php");
+    }
+
 }
