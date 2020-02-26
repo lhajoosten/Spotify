@@ -93,7 +93,7 @@ class Account
 
         // check if length is between 30 and 5 chars
         if (strlen($password) > 30 || strlen($password) < 5) {
-            array_push($this->errorArray, Constants::$passwordLengthError);
+            array_push($this->errorArray, Constants::$passwordLengthError );
             return;
         }
     }
