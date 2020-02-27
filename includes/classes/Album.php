@@ -52,4 +52,16 @@ class Album
         $query = mysqli_query($this->con, "SELECT SUM(duration) FROM songs WHERE album='$this->id'");
         return mysqli_fetch_row($query)[0];
     }
+
+    public function getSongId()
+    {
+        $query = mysqli_query($this->con, "SELECT id FROM songs WHERE album='$this->id' ORDER BY albumOrder ASC");
+        $array = array();
+
+        while ($row = mysqli_fetch_array($query)) {
+            array_push($array, $row['id']);
+        }
+
+        return $array;
+    }
 }

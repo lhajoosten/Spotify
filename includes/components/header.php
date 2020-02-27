@@ -2,6 +2,7 @@
 include("includes/config.php");
 include("includes/classes/Artist.php");
 include("includes/classes/Album.php");
+include("includes/classes/Song.php");
 
 // session_destroy();
 
@@ -21,6 +22,7 @@ if (isset($_SESSION['userLoggedIn'])) {
     <link rel="icon" href="assets/img/icons/Spotify_Icon_RGB_Green.png">
     <link rel="stylesheet" type="text/css" href="assets/css/Index.css">
     <link rel="stylesheet" type="text/css" href="assets/css/album.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/song.css">
 </head>
 <body>
 
