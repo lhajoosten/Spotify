@@ -4,10 +4,14 @@
 
 <div class="gridViewContainer">
     <?php
-    $albumQuery = mysqli_query($con, "SELECT * FROM Albums");
-        while ($row = mysqli_fetch_array($albumQuery)) {
-            echo $row['title'] . "<br>";
-        }
+    $albumQuery = mysqli_query($con, "SELECT * FROM Albums ORDER BY RAND() LIMIT 10");
+    while ($row = mysqli_fetch_array($albumQuery)) {
+        echo "<div class='gridViewItem'>
+                    <a href='album.php?id=" . $row['id'] . "'>
+                    <img src='" . $row['albumCoverPath'] . "' alt='Cover'>
+                    <div class='gridViewInfo'>" . $row['title'] . "</div>
+              </div>";
+    }
     ?>
 </div>
 
