@@ -12,7 +12,8 @@ class Artist
         $this->id = $id;
     }
 
-    public function getName() {
+    public function getName()
+    {
         $artistQuery = mysqli_query($this->con, "SELECT name FROM Artists WHERE id='$this->id'");
         return mysqli_fetch_array($artistQuery)['name'];
     }
