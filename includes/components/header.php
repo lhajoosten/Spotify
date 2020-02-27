@@ -20,6 +20,7 @@ if (isset($_SESSION['userLoggedIn'])) {
     <title>Spotify</title>
     <link rel="icon" href="assets/img/icons/Spotify_Icon_RGB_Green.png">
     <link rel="stylesheet" type="text/css" href="assets/css/Index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/album.css">
 </head>
 <body>
 

@@ -218,7 +218,7 @@ body {
 
 #mainViewContainer {
     margin-left: 220px;
-    padding-bottom: 90px;
+    padding-bottom: 0;
     width: calc(100% - 220px);
 }
 
@@ -227,7 +227,7 @@ body {
 }
 
 .pageHeadingBig {
-    padding: 20px;
+    padding: 0;
     text-align: center;
 }
 

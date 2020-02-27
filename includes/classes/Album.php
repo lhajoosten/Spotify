@@ -14,7 +14,7 @@ class Album
         $this->con = $con;
         $this->id = $id;
 
-        $query = mysqli_query($this->con, "SELECT * FROM Albums WHERE id='$this->id'");
+        $query = mysqli_query($this->con, "SELECT * FROM albums WHERE id='$this->id'");
         $album = mysqli_fetch_array($query);
 
         $this->title = $album['title'];
@@ -41,5 +41,15 @@ class Album
     public function getGenre()
     {
         return $this->genre;
+    }
+
+    public function getSongAmount() {
+        $query = mysqli_query($this->con, "SELECT * FROM songs WHERE album='$this->id'");
+        return mysqli_num_rows($query);
+    }
+
+    public function totalDuration() {
+        $query = mysqli_query($this->con, "SELECT SUM(duration) FROM songs WHERE album='$this->id'");
+        return mysqli_fetch_row($query)[0];
     }
 }
