@@ -17,7 +17,7 @@ if (isset($_SESSION['userLoggedIn'])) {
     <meta charset="UTF-8">
     <title>Spotify</title>
     <link rel="icon" href="assets/img/icons/Spotify_Icon_RGB_Green.png">
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/Index.css">
 </head>
 <body>
 
@@ -25,6 +25,11 @@ if (isset($_SESSION['userLoggedIn'])) {
     <div id="topContainer">
         <div id="navbarContainer">
             <?php include("includes/navBarContainer.php"); ?>
+        </div>
+        <div id="mainViewContainer">
+            <div id="mainContent">
+
+            </div>
         </div>
     </div>
 
