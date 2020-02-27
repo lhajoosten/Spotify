@@ -55,7 +55,7 @@ class Album
 
     public function getSongId()
     {
-        $query = mysqli_query($this->con, "SELECT id FROM songs WHERE album='$this->id' ORDER BY albumOrder ASC");
+        $query = mysqli_query($this->con, "SELECT id FROM songs WHERE album='$this->id' ORDER BY albumOrder");
         $array = array();
 
         while ($row = mysqli_fetch_array($query)) {
