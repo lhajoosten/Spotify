@@ -89,7 +89,7 @@ html, body {
 }
 
 .progress {
-    background-color: #07d159;
+    background-color: #a0a0a0;
     height: 4px;
     width: 33%;
     border-radius: 5px;
@@ -134,4 +134,75 @@ html, body {
 
 .volumeBar .progressBar {
     width: 125px;
+}
+
+#topContainer {
+    min-height: 100%;
+    width: 100%;
+}
+
+#navbarContainer {
+    background-color: #000000;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navBar {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    float: left;
+}
+
+.logoText h2 {
+    list-style-type: none;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navBar .group {
+    border-top: 1px solid #a0a0a0;
+    padding: 10px 0;
+}
+
+.navItem {
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.navItemLink {
+    font-size: 15px;
+    text-decoration: none;
+    color: #a0a0a0;
+}
+
+.navItemLink:hover {
+    color: #ffffff;
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 25px;
+
 }
