@@ -1,9 +1,9 @@
 <?php
-    $songQuery = mysqli_query($con, "SELECT id FROM songs ORDER BY  RAND() LIMIT 10");
-    $resultArray = array();
-    while ($row = mysqli_fetch_array($songQuery)) {
-        array_push($resultArray, $row['id']);
-    }
+$songQuery = mysqli_query($con, "SELECT id FROM songs ORDER BY  RAND() LIMIT 10");
+$resultArray = array();
+while ($row = mysqli_fetch_array($songQuery)) {
+    array_push($resultArray, $row['id']);
+}
 
 $jsonArray = json_encode($resultArray);
 ?>
@@ -16,7 +16,25 @@ $jsonArray = json_encode($resultArray);
     });
 
     function setTrack(trackId, newPlaylist, play) {
+        $.post("", { songId: trackId }, function (data) {
 
+        });
+
+        if (play) {
+            audioElement.play();
+        }
+    }
+
+    function playSong() {
+        $(".controlButton.play").hide();
+        $(".controlButton.pause").show();
+        audioElement.play();
+    }
+
+    function pauseSong() {
+        $(".controlButton.play").show();
+        $(".controlButton.pause").hide();
+        audioElement.pause();
     }
 
 </script>
@@ -40,21 +58,23 @@ $jsonArray = json_encode($resultArray);
     <div id="nowPlayingCenter">
         <div class="content playerControls">
             <div class="buttons">
-                <button class="controlButton" title="Shuffle button">
-                    <img src="assets/img/icons/shuffle.png" alt="shuffle"></button>
-                <button class="controlButton" title="Back button">
+                <button class="controlButton shuffle" title="Shuffle button">
+                    <img src="assets/img/icons/shuffle.png" alt="shuffle">
+                </button>
+                <button class="controlButton back" title="Back button">
                     <img src="assets/img/icons/back.png" alt="back">
                 </button>
-                <button class="controlButton" title="Play button">
-                    <img style="height: 32px; width: 32px;" src="assets/img/icons/play.png" alt="play">
+                <button class="controlButton play" title="Play button" onclick="playSong()">
+                    <img style="height: 40px; width: 40px;" src="assets/img/icons/playing.png" alt="Play button">
                 </button>
-                <button style="height: 32px; width: 32px; display: none" class="controlButton"
-                        title="Pause button">
-                    <img src="assets/img/icons/play.png" alt="play"></button>
-                <button class="controlButton" title="Next button">
+                <button style="display: none" class="controlButton pause"
+                        title="Pause button" onclick="pauseSong()">
+                    <img style="height: 40px; width: 40px;" src="assets/img/icons/pauze.png" alt="Pause button">
+                </button>
+                <button class="controlButton next" title="Next button">
                     <img src="assets/img/icons/next.png" alt="next">
                 </button>
-                <button class="controlButton" title="Repeat button">
+                <button class="controlButton repeat" title="Repeat button">
                     <img src="assets/img/icons/repeat.png" alt="repeat">
                 </button>
 
