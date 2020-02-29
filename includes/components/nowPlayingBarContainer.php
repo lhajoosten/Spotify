@@ -9,16 +9,20 @@ $jsonArray = json_encode($resultArray);
 ?>
 
 <script>
-    $(document).ready(function () {
+    $(document).ready(() => {
         currentPlaylist = <?php echo $jsonArray ?>;
         audioElement = new Audio();
         setTrack(currentPlaylist[0], currentPlaylist, false)
     });
 
     function setTrack(trackId, newPlaylist, play) {
-        $.post("", { songId: trackId }, function (data) {
-
+        $.post("includes/handlers/ajax/getSongJson.php", {songId: trackId}, (data) => {
+            var track = JSON.parse(data);
+            audioElement.setTrack(track.path);
+            audioElement.play();
         });
+
+        audioElement.setTrack("assets/music/blowUp.mp3");
 
         if (play) {
             audioElement.play();
