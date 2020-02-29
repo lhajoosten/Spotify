@@ -22,6 +22,9 @@ if (isset($_SESSION['userLoggedIn'])) {
     <link rel="icon" href="assets/img/icons/Spotify_Icon_RGB_Green.png">
     <link rel="stylesheet" type="text/css" href="assets/css/Index.css">
     <link rel="stylesheet" type="text/css" href="assets/css/albumPage.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/audioScript.js"></script>
 </head>
 <body>
 

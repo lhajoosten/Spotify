@@ -61,7 +61,6 @@ $artist = $album->getArtist();
                 </div>
             </li>";
             $i++;
-
         }
         ?>
 
