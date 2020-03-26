@@ -20,7 +20,7 @@ class Album
         $this->title = $album['title'];
         $this->artistId = $album['artist'];
         $this->genre = $album['genre'];
-        $this->albumCoverPath = $album['albumCoverPath'];
+        $this->albumCoverPath = $album['artworkPath'];
     }
 
     public function getTitle()

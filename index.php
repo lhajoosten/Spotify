@@ -8,7 +8,7 @@
     while ($row = mysqli_fetch_array($albumQuery)) {
         echo "<div class='gridViewItem'>
                     <a href='album.php?id=" . $row['id'] . "'>
-                    <img src='" . $row['albumCoverPath'] . "' alt='Cover'>
+                    <img src='" . $row['artworkPath'] . "' alt='Cover'>
                     <div class='gridViewInfo'>" . $row['title'] . "</div>
               </div>";
     }
